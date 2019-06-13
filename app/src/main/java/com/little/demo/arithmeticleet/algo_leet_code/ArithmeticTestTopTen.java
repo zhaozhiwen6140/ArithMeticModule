@@ -1,4 +1,4 @@
-package com.little.demo.arithmeticleet;
+package com.little.demo.arithmeticleet.algo_leet_code;
 
 
 import java.util.HashMap;
@@ -57,11 +57,54 @@ public class ArithmeticTestTopTen {
      * 输入：(2 -> 4 -> 3) + (5 -> 6 -> 4)
      * 输出：7 -> 0 -> 8
      * 原因：342 + 465 = 807
+     * /表示商的整数，%表示余数
      */
 
 
-    public List addTwoNumbers(List l1, List l2) {
+    // TODO: 2019-06-13 暂时没有调通
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
+        //既然是逆序存储，所以要从表头开始计算
+        ListNode node1 = l1;
+        ListNode node2 = l2;
+        ListNode resultNode = new ListNode(0);//创建一个最终的node的头结点
+        ListNode totalNode = resultNode;
+
+
+        int oneInTen = 0;//添加满十进1的标记位
+
+        /**
+         * 1.条件：只要两个链表中有一个链表的.next还有值，就执行加法
+         * 2.在条件1的基础上，需要判断，如果一个链表有数据但是另一个链表没有数据，没有数据即赋初值为0
+         */
+        while (node1 != null || node2 != null) {
+            if (node1 == null) {
+                node1 = new ListNode(0);
+            }
+
+            if (node2 == null) {
+                node2 = new ListNode(0);
+            }
+
+
+            int total = node1.val + node2.val + oneInTen;
+
+            oneInTen = total / 10;
+            totalNode.next = new ListNode(total % 10);
+
+            totalNode = totalNode.next;
+
+            node1 = node1.next;
+            node2 = node2.next;
+        }
+
+        if(oneInTen > 1) {
+            /**
+             * !!此处容易忽略，如果最高位相加需要进一的话，需要再加一个结点。
+             */
+            totalNode.next = new ListNode(oneInTen);
+        }
+        return resultNode;
     }
 
 }
