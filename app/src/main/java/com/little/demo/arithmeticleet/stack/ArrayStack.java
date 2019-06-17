@@ -2,7 +2,6 @@ package com.little.demo.arithmeticleet.stack;
 
 import android.util.Log;
 
-import org.black.widow.applicationtest.BuildConfig;
 
 /**
  * Created by zhaozhiwen on 2019/3/19.
@@ -11,7 +10,7 @@ import org.black.widow.applicationtest.BuildConfig;
  */
 public class ArrayStack {
 
-    public static boolean DEBUG = BuildConfig.DEBUG;
+    public static boolean DEBUG = true;
     public static final String TAG = "ArrayStack";
 
     private String[] items;//数组
