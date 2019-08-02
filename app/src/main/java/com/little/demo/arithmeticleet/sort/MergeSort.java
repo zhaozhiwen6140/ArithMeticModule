@@ -7,6 +7,9 @@ import java.util.Map;
 
 /**
  * Created by zhaozhiwen on 2019-07-29.
+ * 1.MergeSort属于非原地排序，空间复杂度为O(n),因为每次递归都需要申请一个新的数组，开辟新的空间。一次递归结束时，把数组的内存释放。
+ * 2.MergeSort属于稳定排序，当值相同的数据进行比较时，会先把左侧的数据先拷入到新的数组中，仍然会保证前后的顺序
+ * 3.MergeSort的时间复杂度是O(nlogn)
  */
 public class MergeSort {
 

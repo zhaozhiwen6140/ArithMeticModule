@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.little.demo.arithmeticleet.sort.MergeSort;
+import com.little.demo.arithmeticleet.sort.QuickSort;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         int array[] = new int[]{5,8,3,7,1,4};
-        MergeSort.testMergeSort(array);
+        QuickSort.testQuickSort(array);
 
         if (DEBUG) {
             for(int i=0;i<array.length;i++) {
