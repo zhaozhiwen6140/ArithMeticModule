@@ -4,9 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.little.demo.arithmeticleet.sort.BubbleSort;
-import com.little.demo.arithmeticleet.sort.InsertSort;
-import com.little.demo.arithmeticleet.sort.SelectionSort;
+import com.little.demo.arithmeticleet.sort.MergeSort;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         int array[] = new int[]{5,8,3,7,1,4};
-        SelectionSort.testSelectionSort(array);
+        MergeSort.testMergeSort(array);
 
         if (DEBUG) {
             for(int i=0;i<array.length;i++) {
