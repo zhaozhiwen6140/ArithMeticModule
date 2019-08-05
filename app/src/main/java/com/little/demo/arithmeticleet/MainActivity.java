@@ -17,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         int array[] = new int[]{5,8,3,7,1,4};
-        QuickSort.testQuickSort(array);
+        int k = QuickSort.getTheFirstBigK(array,2);
+        if (DEBUG) {
+            Log.d(TAG, "onCreate: k=" + k);
+        }
 
         if (DEBUG) {
             for(int i=0;i<array.length;i++) {
