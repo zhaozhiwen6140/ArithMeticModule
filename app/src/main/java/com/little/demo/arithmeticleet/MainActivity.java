@@ -4,8 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.little.demo.arithmeticleet.sort.MergeSort;
-import com.little.demo.arithmeticleet.sort.QuickSort;
+import com.little.demo.arithmeticleet.search.BinarySearch;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int array[] = new int[]{5,8,3,7,1,4};
-        int k = QuickSort.getTheFirstBigK(array,2);
+//        int array[] = new int[]{5,8,3,7,1,4};
+        int array[] = new int[]{1,4,5,7,9,13};
+        int k = BinarySearch.testBinarySearchRecursion(array,7);
         if (DEBUG) {
             Log.d(TAG, "onCreate: k=" + k);
         }
