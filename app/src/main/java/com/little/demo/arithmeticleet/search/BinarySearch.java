@@ -137,7 +137,7 @@ public class BinarySearch {
     }
 
     /**
-     * 查找第一个值<=给定值的元素(有可能会存在数组中多个值相等的情况)
+     * 查找最后一个值<=给定值的元素(有可能会存在数组中多个值相等的情况)
      */
     public static int getLastLessThanSearchKey(int a[], int K) {
         int len = a.length;
