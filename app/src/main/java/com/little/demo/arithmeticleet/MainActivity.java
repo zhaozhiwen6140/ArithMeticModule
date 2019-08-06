@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        int array[] = new int[]{5,8,3,7,1,4};
-        int array[] = new int[]{1,4,5,7,9,13};
-        int k = BinarySearch.testBinarySearchRecursion(array,7);
+        int array[] = new int[]{1,7,7,7,9,13};
+        int k = BinarySearch.getLastLessThanSearchKey(array,7);
         if (DEBUG) {
             Log.d(TAG, "onCreate: k=" + k);
         }
